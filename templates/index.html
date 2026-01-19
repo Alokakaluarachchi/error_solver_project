@@ -9,24 +9,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: light dark;
-      --bg: #0d1324;
-      --panel: #0f172a;
-      --muted: #94a3b8;
-      --border: #1e293b;
-      --accent: #3b82f6;
-      --accent-strong: #2563eb;
-      --text: #e2e8f0;
-      --shadow: 0 16px 50px rgba(0, 0, 0, 0.32);
+      color-scheme: light;
+      --bg: #ffffff;
+      --panel: #ffffff;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-strong: #1d4ed8;
+      --text: #0f172a;
+      --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(59,130,246,0.06), transparent 28%),
-        radial-gradient(circle at 80% 0%, rgba(37,99,235,0.08), transparent 30%),
-        linear-gradient(180deg, #0b1220 0%, #0e1527 100%);
+      background: var(--bg);
       color: var(--text);
       min-height: 100vh;
       padding: 32px 20px 60px;
@@ -53,12 +50,11 @@
       gap: 18px;
     }
     .card {
-      background: linear-gradient(150deg, rgba(15,23,42,0.9), rgba(17,24,39,0.96));
-      border: 1px solid rgba(30, 41, 59, 0.9);
+      background: var(--panel);
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 18px;
       box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
     }
     label {
       display: flex;
@@ -73,7 +69,7 @@
       min-height: 260px;
       border-radius: 10px;
       border: 1px solid var(--border);
-      background: #0c1426;
+      background: #f8fafc;
       color: var(--text);
       padding: 14px 12px;
       font: 14px/1.5 "Inter", monospace;
@@ -117,7 +113,7 @@
       padding: 12px;
       border-radius: 10px;
       border: 1px solid var(--border);
-      background: #0c1426;
+      background: #f8fafc;
     }
     .result a {
       color: var(--accent-strong);
@@ -225,8 +221,8 @@
         </span>
       </div>
       <div class="actions" style="padding: 0; margin-bottom:10px;">
-        <input id="newError" type="text" placeholder="Error description" style="flex:1; width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:#0b1220; color:var(--text);">
-        <input id="newSolution" type="text" placeholder="Solution steps..." style="flex:1; width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:#0b1220; color:var(--text);">
+        <input id="newError" type="text" placeholder="Error description" style="flex:1; width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:#f8fafc; color:var(--text);">
+        <input id="newSolution" type="text" placeholder="Solution steps..." style="flex:1; width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:#f8fafc; color:var(--text);">
       </div>
       <button id="addBtn">Save to DB</button>
       <p class="hint" style="margin-top:10px;">Adds an entry to the local SQLite store.</p>
